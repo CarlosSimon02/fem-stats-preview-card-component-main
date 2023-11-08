@@ -87,9 +87,39 @@ p {
     text-transform: uppercase;
 }
 
+@media(min-width: 70.625rem) {
+    body {
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.125rem;
+    }
+    
+    p {
+        font-size: .9375rem;
+        line-height: 1.5625rem;
+        color: var(--clr-neutral-p);
+    }
+    
+    .stats p {
+        font-size: .75rem;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-stat-p);
+        text-transform: uppercase;
+    }
+}
+
 /* layout  */
 body {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     background-color: var(--clr-main-bg);
     display: flex;
     align-items: center;    
@@ -112,6 +142,7 @@ body {
 
 .card__image img {
     filter: brightness(50%) sepia(1)  hue-rotate(-107deg) saturate(60.5%) brightness(101%);
+    width: 100%;
 }
 
 .card__image::after{
@@ -124,29 +155,13 @@ body {
     background-color: var(--clr-accent-transparent);
 }
 
-@media(min-width: 70.625rem) {
-    .card {
-        max-width: 69.375rem;
-        flex-direction: row-reverse;
-    }
-
-    /* .card__image {
-        width: 33.75rem;
-        height: auto;
-    } */
-}
-
 .card__content {
     padding-inline: 2rem;
     padding-block: 2.5rem;
     display: grid;
     gap: 2.5rem;
-}
-
-@media(min-width: 70.625rem) {
-    .card__content {
-        padding-block: 10rem;
-    }
+    flex: 1;
+    overflow: scroll;
 }
 
 .card__content__desc h1 {
@@ -168,5 +183,38 @@ body {
     .card__content__stats {
         display: flex;
         flex-direction: row;
+    }
+}
+
+@media(min-width: 70.625rem) {
+    .card {
+        max-width: 69.375rem;
+        max-height: 27.875rem;
+        flex-direction: row-reverse;
+        flex: 30% 70%;
+    }
+
+    .card__image img {
+        filter: brightness(50%) sepia(1)  hue-rotate(-107deg) saturate(60.5%) brightness(101%);
+        width: 33.75rem;
+    }
+
+    .card__content {
+        padding-block-start: 4.4375rem;
+        padding-inline-start: 4.5rem;
+        padding-inline-end: 5.9375rem;
+        padding-block-end: 0;
+        gap: 4.5rem;
+        align-content: start;
+    }
+
+    .card__content__desc h1 {
+        margin-bottom: 1.5625rem;
+    }
+
+    .card__content__stats {
+        display: flex;
+        gap: 4rem;
+        justify-content: start;
     }
 }
