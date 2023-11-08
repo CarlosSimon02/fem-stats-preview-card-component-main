@@ -119,7 +119,7 @@ p {
 }
 
 /* layout  */
-body {
+main {
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--clr-main-bg);
