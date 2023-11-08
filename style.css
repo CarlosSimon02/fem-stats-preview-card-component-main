@@ -72,6 +72,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+    line-height: 1;
 }
 
 p {
@@ -83,7 +84,6 @@ p {
 
 .stats p {
     font-size: .75rem;
-    line-height: 1;
     font-family: var(--ff-accent);
     color: var(--clr-neutral-stat-p);
     text-transform: uppercase;
