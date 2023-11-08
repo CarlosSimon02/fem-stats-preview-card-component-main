@@ -78,6 +78,7 @@ p {
     font-size: .9375rem;
     line-height: 1.5625rem;
     color: var(--clr-neutral-p);
+    max-width: 40ch;
 }
 
 .stats p {
@@ -85,6 +86,7 @@ p {
     font-family: var(--ff-accent);
     color: var(--clr-neutral-stat-p);
     text-transform: uppercase;
+    letter-spacing: 0.0625rem;
 }
 
 @media(min-width: 70.625rem) {
